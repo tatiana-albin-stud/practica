@@ -17,7 +17,7 @@ const Details = () => {
   }, [id]);
   console.log(data);
   return (
-    !loading && (
+    !loading && ( 
       <div className={styles.container}>
         <div className={styles.title}>
           <h1>Titlu:    {data.title}</h1>
