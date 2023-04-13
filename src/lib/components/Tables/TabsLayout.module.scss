@@ -1,0 +1,64 @@
+@import '../../../styles/mixins.scss';
+
+.withBoxShadow {
+    box-shadow: #eaeef4 0px 4px 16px, #eaeef1 0px 8px 32px;
+}
+
+.noBoxShadow {
+    box-shadow: none;
+}
+
+.withMarginTop {
+    margin-top: 1.5rem;
+}
+
+.tabsWrapper {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+
+    .boxWrapper {
+        border-bottom: 1px solid;
+        border-color: rgba(0, 0, 0, 0.12);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        @include tablet-portrait {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tabs {
+            padding-left: 1rem;
+
+            @include phone-only {
+                padding-left: 0.5rem;
+            }
+        }
+
+        .buttonWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 1rem;
+            gap: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tabsWrapper {
+        .buttonWrapper {
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .tabsWrapper {
+        .buttonWrapper {
+            flex-direction: column;
+        }
+    }
+}

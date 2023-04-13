@@ -1,0 +1,76 @@
+.boxShadow {
+    box-shadow: #eaeef4 0px 4px 16px, #eaeef1 0px 8px 32px;
+}
+
+.noBoxShadow {
+    box-shadow: none;
+}
+
+.tableWrapper {
+    border-radius: 1rem;
+    width: 100%;
+    overflow: hidden;
+
+    .titleWrapper {
+        min-width: 100%;
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+        .titleTypography {
+            font-size: 24px;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.62);
+        }
+    }
+
+    .tableContainer {
+        max-height: 100%;
+
+        .headCell {
+            color: rgba(0, 0, 0, 0.62);
+            font-size: 15;
+            font-weight: 700;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .rowWithColors:nth-of-type(odd) {
+            background-color: rgba(250, 251, 252, 1);
+        }
+
+        .row:nth-of-type(odd) {
+            background-color: #ffffff;
+        }
+
+        .cell {
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+            border: none;
+            white-space: nowrap;
+
+            .cellNoDataText {
+                text-align: center;
+                padding: 5rem 1rem;
+                color: rgba(66, 82, 110, 0.86);
+            }
+        }
+    }
+
+    .bottomPaddingForTable {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.pagination {
+    margin-right: 3%;
+    color: black;
+    opacity: 62%;
+    font-weight: 400;
+}
+
+.loadingDiv {
+    padding: 5rem 1mm;
+}

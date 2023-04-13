@@ -1,0 +1,36 @@
+@import 'styles/mixins.scss';
+
+.document {
+    border: 1px solid #ced1dc;
+    padding: 0.1rem 1rem;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .textWrapper {
+        flex: 1.25;
+        display: flex;
+
+        @include phone-only {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .cellWrapperOne {
+            flex: 0.5;
+            align-self: center;
+        }
+
+        .cellWrapperTwo {
+            flex: 1.5;
+            align-self: center;
+        }
+    }
+
+    .bigCellWrapper {
+        flex: 0.75;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

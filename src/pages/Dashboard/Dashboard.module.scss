@@ -1,0 +1,104 @@
+@import "../../styles/mixins.scss";
+
+.header {
+  background-color: #ffffff;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: #eaeef4 0px 4px 16px -16px, #eaeef1 0px 8px 32px -32px;
+
+  .text {
+    padding: 0;
+
+    @include phone-only {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1090px;
+  margin: 0 auto;
+
+  .wrapper {
+    .box {
+      margin-top: 32px;
+      margin-bottom: 16px;
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+
+      .tooltipDiv {
+        display: inline-flex;
+        color: #ff4b55;
+        margin-top: 1rem;
+      }
+    }
+
+    .generalText {
+      margin-top: 32px;
+      margin-bottom: 16px;
+      text-align: none;
+
+      @include phone-only {
+        text-align: center;
+      }
+    }
+
+    .generalAdministration {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .itemDiv {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    .unitsText {
+      margin-top: 32px;
+      margin-bottom: 16px;
+      text-align: none;
+
+      @include phone-only {
+        text-align: center;
+      }
+    }
+
+    .unitsCharacteristics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .itemDiv {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: 3px;
+}
+
+@media screen and (max-width: 640px) {
+  .generalAdministration {
+    justify-content: center;
+  }
+
+  .unitsCharacteristics {
+    justify-content: center;
+  }
+}

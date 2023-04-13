@@ -1,0 +1,24 @@
+.searchComponent {
+    width: 100%;
+    border-radius: 999px;
+    box-shadow: #eaeef4 0px 4px 16px, #eaeef1 0px 8px 32px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 9px 20px;
+
+    .adornment {
+        margin-right: 10px;
+    }
+
+    .isSearch {
+        color: #17ad00;
+        transform: scale(1.1, 1.1);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .clear {
+        cursor: pointer;
+    }
+}

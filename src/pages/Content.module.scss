@@ -1,0 +1,42 @@
+@import '../styles/mixins.scss';
+
+.wrapper {
+    background: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 6rem 0 0 15rem;
+
+    @include hd {
+        padding: 6rem 0 0 0;
+    }
+
+    .container {
+        position: relative;
+        border-top-left-radius: 1rem;
+        background: #fafbfc;
+        width: 100%;
+        height: calc(100vh - 6rem);
+
+        @include hd {
+            border-top-left-radius: 0;
+        }
+
+        .shadow {
+            position: fixed;
+            border-top-left-radius: inherit;
+            width: 100%;
+            height: inherit;
+            box-shadow: inset 5px 5px 15px rgba(35, 78, 140, 0.1);
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .content {
+            height: inherit;
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+    }
+}

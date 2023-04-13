@@ -1,0 +1,155 @@
+@import "../../../styles/mixins.scss";
+
+.sidebar_container {
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+
+  .logoRaisisOnMobile {
+    display: none;
+    @include small-phone-only {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include hd {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .navBar {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #5b80ba;
+    border-radius: 3px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #3d5f95;
+  }
+
+  .nav_class {
+    margin: 0.5rem 0 0.5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .sidebar_list_container {
+    padding: 0 0 1rem 0;
+
+    .sidebar_list_divider {
+      color: #dce4e9;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      display: flex;
+
+      &::before {
+        flex: 1;
+        padding-left: 13%;
+        border-top-width: 2px;
+      }
+
+      &::after {
+        border-top-width: 2px;
+      }
+    }
+
+    .sidebar_list_version {
+      font-weight: 600;
+      font-size: 12px;
+      text-align: center;
+      letter-spacing: 0.1px;
+      line-height: 157%;
+      margin-top: 15px;
+      color: #dce4e9;
+      cursor: pointer;
+    }
+
+    .sidebar_list_version a {
+      text-decoration: none;
+      color: #dce4e9;
+    }
+
+    .sidebar_list_item {
+      border-radius: 25px 0px 0px 25px;
+      margin-left: 25px;
+
+      &:hover {
+        background-color: transparent;
+
+        .sidebar_list_item_text {
+          color: #5b80ba;
+        }
+      }
+
+      &:active {
+        background-color: #e2e9f3;
+        color: #5b80ba;
+      }
+
+      .sidebar_list_item_icon {
+        font-size: 20px;
+        min-width: 0;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        transition: all;
+        transition-duration: 400ms;
+      }
+
+      .sidebar_list_item_text {
+        font-size: 13px;
+        transition: all;
+        transition-duration: 200ms;
+      }
+    }
+
+    .list_item_nested {
+      margin-left: 20%;
+      border-radius: 25px 0px 0px 25px;
+
+      &:hover {
+        background-color: transparent;
+
+        .list_item_text_nested {
+          color: #5b80ba;
+        }
+      }
+
+      .list_item_icon_nested {
+        min-width: 0;
+        padding-left: 10px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .list_item_text_nested {
+        color: #8e99a7;
+        font-size: 13px;
+        padding-left: 10px;
+      }
+    }
+  }
+}

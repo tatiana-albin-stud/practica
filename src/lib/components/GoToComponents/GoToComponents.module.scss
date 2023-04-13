@@ -1,0 +1,45 @@
+.go-to-components {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    z-index: 9999;
+    width: 400px;
+    height: 60px;
+    border-radius: 999px 0 0 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transform: translateX(330px);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    font-weight: 800;
+
+    span {
+        position: relative;
+        font-size: 20px;
+        margin-right: 12px;
+    }
+
+    .controlsWrapper {
+        position: relative;
+        display: flex;
+        gap: 5px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(6px);
+    }
+
+    &:hover {
+        transform: translateX(0);
+    }
+}

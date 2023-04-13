@@ -1,0 +1,24 @@
+@import "../../../styles/mixins.scss";
+.generalAdministration {
+  gap: 16px;
+}
+
+.mainContainer {
+  display: flex;
+  gap: 16px;
+  justify-content: space-evenly;
+  @include phone-only {
+    flex-direction: column;
+  }
+}
+
+.itemDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.62);
+}

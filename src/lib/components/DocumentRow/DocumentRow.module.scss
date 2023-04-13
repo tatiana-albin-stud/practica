@@ -1,0 +1,12 @@
+.document {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #ced1dc;
+    border-radius: 10px;
+
+    > * {
+        flex: 1;
+    }
+}

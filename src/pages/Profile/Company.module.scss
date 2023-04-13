@@ -1,0 +1,72 @@
+@import "../../styles/mixins.scss";
+
+.companyWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-shrink: 0;
+  border-radius: 10px;
+  text-align: center;
+  // max-width: 215px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: #eaeef4 0px 4px 16px, #eaeef1 0px 8px 32px;
+  margin-top: 2rem;
+  padding: 16px;
+
+  @include phone-only {
+    max-width: 100%;
+  }
+
+  .imageBox {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .imageContent {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    @include phone-only {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .contentWrapper {
+    padding: 15px 20px;
+
+    .title {
+      word-break: break-all;
+      hyphens: auto;
+    }
+
+    .site {
+      text-decoration: underline;
+      word-break: break-all;
+      hyphens: auto;
+      &:hover {
+        color: #5b80ba;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .description {
+    color: red;
+    word-break: break-all;
+    hyphens: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttonsWrapper {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
